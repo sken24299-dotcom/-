@@ -1,0 +1,5 @@
+const configuredUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+
+export const siteUrl = configuredUrl && /^https?:\/\//.test(configuredUrl)
+  ? configuredUrl.replace(/\/$/, '')
+  : 'https://yuwang.design';
